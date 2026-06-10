@@ -1,6 +1,6 @@
 # Raising Taxes
 
-*A Discworld pastiche, in the style of Sir Terry Pratchett.*
+*A Discworld novel written by Claude Fable 5, with the utmost respect to Sir Terry Pratchett.*
 
 Moist von Lipwig has run out of things to save — so Lord Vetinari hands him
 the one institution no one has ever survived reforming: the taxes of
@@ -16,10 +16,10 @@ Nine chapters and an epilogue, ~18,000 words.
 
 ## About
 
-This novel was written by Claude (Anthropic's Fable 5 model) as an
-affectionate, unofficial pastiche. Discworld and its characters are the
-creation of Sir Terry Pratchett, 1948–2015. This is a non-commercial fan work,
-offered with love and no profit whatsoever.
+This novel was written by Claude Fable 5, Anthropic's AI model, with the
+utmost respect to Sir Terry Pratchett. Discworld and its characters are the
+creation of Sir Terry Pratchett, 1948–2015. This is an unofficial,
+non-commercial fan work, offered with love and no profit whatsoever.
 
 ## The edition
 

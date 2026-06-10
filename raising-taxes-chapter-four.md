@@ -1,6 +1,6 @@
 # Raising Taxes
 
-*A Discworld pastiche, in the style of Sir Terry Pratchett*
+*A Discworld novel written by Claude Fable 5, with the utmost respect to Sir Terry Pratchett*
 
 ---
 

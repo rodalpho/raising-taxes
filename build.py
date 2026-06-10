@@ -32,7 +32,7 @@ SOURCES = [
 ]
 
 BOOK_TITLE = "Raising Taxes"
-BYLINE = "A Discworld pastiche, in the style of Sir Terry Pratchett"
+BYLINE = "A Discworld novel written by Claude Fable 5, with the utmost respect to Sir Terry Pratchett"
 
 # ---------------------------------------------------------------- ornaments
 
@@ -126,6 +126,20 @@ ORNAMENTS = {
         '<path d="M40 58 H80 M36 58 l-4 4 M84 58 l4 4" stroke-width="1.4"/>'
         '</g></svg>'),
 }
+
+TAILPIECE = (
+    '<svg viewBox="0 0 170 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">'
+    '<g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round">'
+    '<path d="M85 4 C81.5 9.5 77 12 70.5 12.5 C77 13.3 81.5 15 85 18.5 '
+    'C88.5 15 93 13.3 99.5 12.5 C93 12 88.5 9.5 85 4 Z" fill="currentColor" stroke="none"/>'
+    '<path d="M70 13 C58 13 52 18.5 45 18.5 C37 18.5 33 13.5 26 15.5 M26 15.5 '
+    'c-3.5 1 -4.5 5.5 -1 6.5 c3.2 0.9 5 -2.5 2.6 -4.2"/>'
+    '<path d="M100 13 C112 13 118 18.5 125 18.5 C133 18.5 137 13.5 144 15.5 M144 15.5 '
+    'c3.5 1 4.5 5.5 1 6.5 c-3.2 0.9 -5 -2.5 -2.6 -4.2"/>'
+    '<circle cx="15" cy="17" r="1.4" fill="currentColor" stroke="none"/>'
+    '<circle cx="155" cy="17" r="1.4" fill="currentColor" stroke="none"/>'
+    '<path d="M85 26 q-3 4.5 0 7.5 q3 -3 0 -7.5" fill="currentColor" stroke="none"/>'
+    '</g></svg>')
 
 FLEURON = (
     '<svg viewBox="0 0 60 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">'
@@ -297,8 +311,8 @@ def masthead(current=None):
 
 def colophon():
     return f"""<footer class="colophon">
-  <p>Written by Claude, an artificial intelligence, as an affectionate pastiche
-  in the style of Sir&nbsp;Terry&nbsp;Pratchett.</p>
+  <p>Written by Claude Fable 5, an artificial intelligence,
+  with the utmost respect to Sir&nbsp;Terry&nbsp;Pratchett.</p>
   <p>Discworld and its people are the creation of Sir Terry Pratchett, 1948–2015.
   This unofficial homage is offered with love, and no profit whatsoever.</p>
   <p class="clacks">GNU Terry Pratchett</p>
@@ -325,7 +339,9 @@ def render_part(part, slug, prev_page, next_page):
         if b == "---":
             body_parts.append(f'<div class="scene-break" role="separator">{FLEURON}</div>')
         elif b == "THE END":
-            body_parts.append('<p class="the-end">The End</p>')
+            body_parts.append(
+                '<div class="the-end"><p class="the-end-text">The End</p>'
+                f'<div class="the-end-tail">{TAILPIECE}</div></div>')
         else:
             t = inline_html(b, ref_ids)
             if first:
